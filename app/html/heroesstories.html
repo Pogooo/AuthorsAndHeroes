@@ -1,5 +1,37 @@
-<ion-view title="Users">
-    <ion-content>			
-Heroes' stories
+<ion-view title="Heroes' stories">
+    <ion-content style="height: 100%">			
+			<div>
+				<div>
+				 <h1>Unfinished stories</h1>
+				 <div>
+					 <div ng-repeat="unfinStory in unfinishedStories">
+						<div class="container">
+							{{unfinStory.NAME}}<br>
+							{{unfinStory.IMG_SRC}}<br>
+							{{unfinStory.DESCRIPTION}}<br>
+							{{unfinStory.STORY_NUMBER}}<br>
+							{{unfinStory.STORYLINE_NAME}}
+							<hr>
+						</div>
+					 </div>
+				 </div>
+				</div>
+								
+				<div>
+				 <h1>Stories nearby</h1>
+				  <div ng-repeat="nearbyStory in nearbyStories">
+					 <div >
+						<div class="container">
+							{{nearbyStory.NAME}}<br>
+							{{nearbyStory.IMG_SRC}}<br>
+							{{nearbyStory.DESCRIPTION}}<br>
+							{{nearbyStory.STORY_NUMBER}}<br>
+							{{nearbyStory.STORYLINE_NAME}}
+							<hr>
+						</div>
+					 </div>
+					</div>
+				</div>
+			</div>
 		</ion-content>
 </ion-view> 

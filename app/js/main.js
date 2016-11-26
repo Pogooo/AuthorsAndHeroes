@@ -22,7 +22,12 @@ angular.module('aah', ['ionic'])
 	//Stories of the heroes
 	.state('herostories', {
     url: "/herostories",
-		templateUrl: "app/html/heroesstories.html",
+		views: {
+			'': {
+				templateUrl: "app/html/heroesstories.html",
+				controller: 'HeroStoriesCtrl'
+			}
+    }
   })
 	
 	//Stories for the authors
@@ -95,6 +100,88 @@ angular.module('aah', ['ionic'])
   $scope.dunno = "I don't know";
 })
 
-.controller('StoryDetailsCtrl', function($scope) {
-  $scope.dunno = "I don't know";
+.controller('StoryDetailsCtrl', function($scope, $http, $stateParams) {
+  $scope.story = {
+		NAME: "Storyname",
+		IMG_SRC: "valami/valami.jpg",
+		DESCRIPTION: "dfssadgfdsgfdsg",
+		STORY_NUMBER: 5,
+		QUESTION: "Why did Spidey cross the road?",
+		ANSWER: "To get the another router",
+		STORYLINE_NAME: "Storysdfaasd sdf sd line",
+		STORYLINE_ID: 21345325 //for the url
+	};
+})
+
+.controller('HeroStoriesCtrl', function($scope) {
+	//sample data
+  $scope.unfinishedStories = [
+		{
+			NAME: 'valami',
+			DESCRIPTION: "dsfdsafdsagfdsa dsf dsa dst ",
+			IMG_SRC: '/valami/valami.jpg',
+			STORY_NUMBER: 5,
+			STORYLINE_NAME: "Valami storyline",
+			STORYLINE_ID: 12412
+		},
+				{
+			NAME: 'valami',
+			DESCRIPTION: "dsfdsafdsagfdsa dsf dsa dst ",
+			IMG_SRC: '/valami/valami.jpg',
+			STORY_NUMBER: 5,
+			STORYLINE_NAME: "Valami storyline",
+			STORYLINE_ID: 12412
+		},
+				{
+			NAME: 'valami',
+			DESCRIPTION: "dsfdsafdsagfdsa dsf dsa dst ",
+			IMG_SRC: '/valami/valami.jpg',
+			STORY_NUMBER: 5,
+			STORYLINE_NAME: "Valami storyline",
+			STORYLINE_ID: 12412
+		},
+				{
+			NAME: 'valami',
+			DESCRIPTION: "dsfdsafdsagfdsa dsf dsa dst ",
+			IMG_SRC: '/valami/valami.jpg',
+			STORY_NUMBER: 5,
+			STORYLINE_NAME: "Valami storyline",
+			STORYLINE_ID: 12412
+		}
+	];
+	
+	$scope.nearbyStories = [
+		{
+			NAME: 'valami',
+			DESCRIPTION: "dsfdsafdsagfdsa dsf dsa dst ",
+			IMG_SRC: '/valami/valami.jpg',
+			STORY_NUMBER: 5,
+			STORYLINE_NAME: "Valami storyline",
+			STORYLINE_ID: 12412
+		},
+		{
+			NAME: 'valami',
+			DESCRIPTION: "dsfdsafdsagfdsa dsf dsa dst ",
+			IMG_SRC: '/valami/valami.jpg',
+			STORY_NUMBER: 5,
+			STORYLINE_NAME: "Valami storyline",
+			STORYLINE_ID: 12412
+		},
+				{
+			NAME: 'valami',
+			DESCRIPTION: "dsfdsafdsagfdsa dsf dsa dst ",
+			IMG_SRC: '/valami/valami.jpg',
+			STORY_NUMBER: 5,
+			STORYLINE_NAME: "Valami storyline",
+			STORYLINE_ID: 12412
+		},
+				{
+			NAME: 'valami',
+			DESCRIPTION: "dsfdsafdsagfdsa dsf dsa dst ",
+			IMG_SRC: '/valami/valami.jpg',
+			STORY_NUMBER: 5,
+			STORYLINE_NAME: "Valami storyline",
+			STORYLINE_ID: 12412
+		}
+	];
 })

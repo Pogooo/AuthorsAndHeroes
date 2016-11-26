@@ -1,5 +1,22 @@
-<ion-view title="Users">
-    <ion-content>			
-story details
+<ion-view title="Story details">
+    <ion-content>
+			<div class="container">
+				<div id="storyheader">
+					<h2 id="story-name">{{story.NAME}}</h2>
+					
+					{{story.STORYLINE_NAME}}<span> - no. {{story.STORY_NUMBER}}</span><br>
+					
+					<label>description</label><br>
+					<div style="font-style: italic" id="story-description">{{story.DESCRIPTION}}</div>
+					<hr>
+					
+					<label for="story-question">Question</label><br>
+					<span id="story-question">{{story.QUESTION}}</span>
+					<br>
+
+					<label for="story-answer">Answer</label><br>
+					<span id="story-answer">{{story.ANSWER}}</span>
+				</div>
+			</div>
 		</ion-content>
 </ion-view> 
