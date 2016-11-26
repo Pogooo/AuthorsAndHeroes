@@ -1,0 +1,81 @@
+#search, 
+#submit {
+    float: left;
+}
+
+#search {
+    padding: 5px 9px;
+    height: 23px;
+    width: 300px;
+    border: 1px solid #a4c3ca;
+    font: normal 13px 'trebuchet MS', arial, helvetica;
+    background: #f1f1f1;
+    border-radius: 50px 3px 3px 50px;
+    box-shadow: 0 1px 3px #e6b800 inset, 0 1px 0 #e6b800;            
+}
+
+/* ----------------------- */
+
+#submit
+{       
+    background-color: #e6b800;
+    background-image: linear-gradient(#e6b800, #e6b800);
+    border-radius: 3px 50px 50px 3px;    
+    border-width: 1px;
+    border-style: solid;
+    border-color: #e6b800;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 
+                0 1px 0 rgba(255, 255, 255, 0.3) inset;
+    height: 35px;
+    margin: 0 0 0 10px;
+    padding: 0;
+    width: 90px;
+    cursor: pointer;
+    font: bold 14px Arial, Helvetica;
+    color: #23441e;    
+    text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+}
+
+#submit:hover {       
+    background-color: #95d788;
+    background-image: linear-gradient(#6cbb6b, #95d788);
+}   
+
+#submit:active {       
+    background: #95d788;
+    outline: none;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;        
+}
+
+#submit::-moz-focus-inner {
+       border: 0;  /* Small centering fix for Firefox */
+}
+
+#picture {
+	
+	padding: 30px 30px;
+    height: 50px;
+    width: 70px;
+    border: 1px solid #a4c3ca;
+	position: absolute;
+	top:80px;
+	background-image:url("https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-128.png");
+	
+	
+    
+}
+
+#username{
+    position:absolute;
+	text-align:left;
+	padding-left:300px;
+    top:80px;
+	font-size:20px;
+	
+	}
+	
+h3{
+	position:relative;
+font-size:20px;	
+top:150px;
+}
