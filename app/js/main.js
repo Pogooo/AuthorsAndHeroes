@@ -44,6 +44,7 @@ angular.module('aah', ['ionic'])
         templateUrl: "app/html/usersprofile.html",
         controller: 'UserProfileCtrl'
       }
+		}
   })
 	
 	//user's setting page
@@ -54,6 +55,7 @@ angular.module('aah', ['ionic'])
 				templateUrl: "app/html/settings.html",
 				controller: 'SettingCtrl'
 			}
+		}
   })
 	
 	//Story details page
@@ -64,6 +66,7 @@ angular.module('aah', ['ionic'])
 				templateUrl: "app/html/storydetails.html",
 				controller: 'StoryDetailsCtrl'
 			}
+		}
   })
 })
 
