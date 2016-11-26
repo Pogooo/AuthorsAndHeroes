@@ -37,42 +37,42 @@
 	
 		<script src="app/js/main.js"></script>
   </head>
-  <body ng-app="aah" ng-controller="MainCtrller">
+  <body ng-app="aah">
+	  <img id="img" class="img-responsive" src="img/font.png">
+		<ion-nav-view>
+		  <ion-view>
+				<ion-content>					
+					<div class="button-bar">
+						<button class="button button-calm" id="storybutton"><img src="img/author.jpg" width="auto"  height= "auto">
+							Story
+						</button>
+						<button class="button button-balanced" id="createstorybutton"><img src="img/create.jpg" width="auto" height= "auto">
+							Create story
+						</button>
+					</div>
+				</ion-content>
+			</ion-view>
+		</ion-nav-view>
+		
+		<ion-nav-bar class="bar-positive">					
+			<ion-bottom-bar class="bar-stable">
+		 
+				<div class="tabs tabs-icon-left">
+					<a ui-sref="main" class="tab-item">
+						<i class="icon ion-home"></i>
+						Home
+					</a>
+					<a class="tab-item">
+						<i class="icon ion-star"></i>
+						My profile
+					</a>
+					<a class="tab-item">
+						<i class="icon ion-gear-a"></i>
+						Settings
+					</a>
+				</div>
 
-    <ion-pane>
-	 <img id="img" class="img-responsive" src="img/font.png">
-      <ion-bottom-bar class="bar-stable">
-	 
-        <div class="tabs tabs-icon-left">
-		<a class="tab-item">
-    <i class="icon ion-home"></i>
-    Home
-  </a>
-  <a class="tab-item">
-    <i class="icon ion-star"></i>
-    My profile
-  </a>
-  <a class="tab-item">
-    <i class="icon ion-gear-a"></i>
-    Settings
-  </a>
-</div>
-
-      </ion-bottom-bar>
-	  
-      <ion-content>
-	   
-
-      </ion-content>
-	  
-	  <div class="button-bar">
-   <button class="button button-calm" id="storybutton"><img src="img/author.jpg" width="auto"  height= "auto">
-  Story
-</button>
-<button class="button button-balanced" id="createstorybutton"><img src="img/create.jpg" width="auto" height= "auto">
-  Create story
-</button>
-</div>
-    </ion-pane>11
+			</ion-bottom-bar>
+		</ion-nav-bar>
   </body>
 </html>

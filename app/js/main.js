@@ -1,9 +1,9 @@
 angular.module('aah', ['ionic'])
 
-.config(function($stateProvider) {
+.config(function($stateProvider, $urlRouterProvider) {
   //
   // For any unmatched url, redirect to /state1
-
+  $urlRouterProvider.otherwise("/main");
   //
   // Now set up the states
   $stateProvider
@@ -11,7 +11,12 @@ angular.module('aah', ['ionic'])
 // Main page state
   .state('main', {
     url: "/main",
-		templateUrl: "app/html/main.html",
+		views: {
+      '': {
+        templateUrl: "app/html/main.html",
+        controller: 'StartCtrl'
+      }
+    }
   })
 	
 	//Stories of the heroes
@@ -23,8 +28,12 @@ angular.module('aah', ['ionic'])
 	//Stories for the authors
 	.state('authorstories', {
     url: "/authorstories",
-		templateUrl: "app/html/authorstories.html",
-		controller: "AuthorStoriesCtrl"
+				views: {
+      '': {
+        templateUrl: "app/html/authorstories.html",
+        controller: 'AuthorStoriesCtrl'
+      }
+    }
   })
 	
 	//user's profile page
@@ -57,4 +66,8 @@ angular.module('aah', ['ionic'])
 
 .controller('AuthorStoriesCtrl', function($scope) {
   $scope.valami = "valanmiii";
+})
+
+.controller('StartCtrl', function($scope) {
+  $scope.dunno = "I don't know";
 })
