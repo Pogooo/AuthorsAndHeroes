@@ -20,15 +20,15 @@ angular.module('aah', ['ionic'])
   })
 	
 	//Stories of the heroes
-	.state('heroesstories', {
-    url: "/heroesstories",
+	.state('herostories', {
+    url: "/herostories",
 		templateUrl: "app/html/heroesstories.html",
   })
 	
 	//Stories for the authors
 	.state('authorstories', {
     url: "/authorstories",
-				views: {
+		views: {
       '': {
         templateUrl: "app/html/authorstories.html",
         controller: 'AuthorStoriesCtrl'
@@ -39,19 +39,31 @@ angular.module('aah', ['ionic'])
 	//user's profile page
 	.state('usersprofile', {
     url: "/usersprofile",
-		templateUrl: "app/html/usersprofile.html",
+		views: {
+      '': {
+        templateUrl: "app/html/usersprofile.html",
+        controller: 'UserProfileCtrl'
+      }
   })
 	
 	//user's setting page
 	.state('settings', {
     url: "/settings",
-		templateUrl: "app/html/settings.html",
+		views: {
+			'': {
+				templateUrl: "app/html/settings.html",
+				controller: 'SettingCtrl'
+			}
   })
 	
 	//Story details page
 	.state('storydetails', {
     url: "/storydetails",
-		templateUrl: "app/html/storydetails.html",
+		views: {
+			'': {
+				templateUrl: "app/html/storydetails.html",
+				controller: 'StoryDetailsCtrl'
+			}
   })
 })
 
@@ -69,5 +81,17 @@ angular.module('aah', ['ionic'])
 })
 
 .controller('StartCtrl', function($scope) {
+  $scope.dunno = "I don't know";
+})
+
+.controller('UserProfileCtrl', function($scope) {
+  $scope.dunno = "I don't know";
+})
+
+.controller('SettingCtrl', function($scope) {
+  $scope.dunno = "I don't know";
+})
+
+.controller('StoryDetailsCtrl', function($scope) {
   $scope.dunno = "I don't know";
 })
