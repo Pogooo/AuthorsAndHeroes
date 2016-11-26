@@ -11,7 +11,7 @@ angular.module('aah', ['ionic'])
 // Main page state
   .state('main', {
     url: "/main",
-		templateUrl: "app/main.html",
+		templateUrl: "app/html/main.html",
   })
 	
 	//Stories of the heroes
@@ -24,6 +24,7 @@ angular.module('aah', ['ionic'])
 	.state('authorstories', {
     url: "/authorstories",
 		templateUrl: "app/html/authorstories.html",
+		controller: "AuthorStoriesCtrl"
   })
 	
 	//user's profile page
@@ -52,4 +53,8 @@ angular.module('aah', ['ionic'])
     { title: 'Get high enough to grab the flag' },
     { title: 'Find the Princess' }
   ];
+})
+
+.controller('AuthorStoriesCtrl', function($scope) {
+  $scope.valami = "valanmiii";
 })
