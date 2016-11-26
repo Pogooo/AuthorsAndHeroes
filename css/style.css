@@ -1,1 +1,37 @@
 /* Empty. Add your own CSS if you like */
+
+.button-bar
+{
+	min-height:100%;
+	text-align: center;
+	padding-top: 10%; 
+}
+
+.createstorybutton
+{	background-image: url(.../img/font.png); 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+	margin: auto;
+	margin-right:1px;
+	min-height:100%;
+}
+
+
+#author
+
+{display:block;
+	background-image: black;
+
+}
+
+img {
+    display: block;
+    margin: auto;
+     max-width: 100%;
+    height: auto;
+}
+.img-responsive { display: block;
+    margin: auto;
+     max-width: 100%;
+    height: auto;};
