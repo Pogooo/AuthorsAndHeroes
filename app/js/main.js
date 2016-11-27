@@ -84,8 +84,12 @@ angular.module('aah', ['ionic'])
   ];
 })
 
-.controller('AuthorStoriesCtrl', function($scope) {
-  $scope.valami = "valanmiii";
+.controller('AuthorStoriesCtrl', function($scope, $http) {
+	$scope.storyline = {stations: []};
+	
+  $scope.addStation = function(){
+		$scope.storyline.stations.push({});
+	};
 })
 
 .controller('StartCtrl', function($scope) {

@@ -1,26 +1,43 @@
 <ion-view title="Author's stories">
-    <ion-content>			
+    <ion-content padding="true">			
 			<div>
 				<h1>Create Storyline</h1>
-				<button>Create new story</button>
+				<label>name
+				<input type="text" ng-model="storyline.name"/>
+				</label><br>
 				<div id="bacon-div">
-					<button>Add new station</button>
-					<div class="new-bacon-data">
-						<label>name</label>
-						<label>description</label>
-						<label>bacon pick from the map</label>
+					<div ng-repeat="station in storyline.stations" class="new-bacon-data">
+						<h2>Station</h2>
+						<label>name
+						<input type="text" ng-model="station.name"/><br>
+						</label>
+						<label>description
+						<input type="text" ng-model="station.description"/><br>
+						</label>
+						<label>bacon pick from the map
+						<input type="text" ng-model="station.baconid"/><br>
+						</label>
 						<label>question</label>
-						<label>answer</label>
-						<label>add photo</label>
-						
+						<input type="text" ng-model="station.question"/><br>
+						</label>
+						<label>answer
+						<input type="text" ng-model="station.answer"/><br>
+						</label>
+						<label>add photo
+						<input type="text" ng-model="station.photo"/>
+						</label>
 					</div>
 				</div>
+				<button class="button" ng-click="addStation()">Add new station</button>
+				<button class="button" ng-click="makeNewStory()">Create new story</button>
 			</div>
 			<div>
 				<h1>Written stories</h1>
-				<div>
-				
-				</div>
+				<ul ng-repeat="writtenStoryline in storiesHistory">
+					<li>
+						{{writtenStoryline.NAME}}
+					</li>
+				</ul>
 			</div>
 		</ion-content>
 </ion-view> 

@@ -1,4 +1,6 @@
 /* Empty. Add your own CSS if you like */
+.scroll{height: 100%;}
+
 .bar.bar-positive {
 	background-color: white !important;
 }
