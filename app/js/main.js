@@ -1,4 +1,4 @@
-angular.module('aah', ['ionic'])
+angular.module('aah', ['ionic', 'ngAnimate'])
 
 .config(function($stateProvider, $urlRouterProvider) {
   //
