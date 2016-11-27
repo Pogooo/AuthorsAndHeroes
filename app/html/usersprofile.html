@@ -1,5 +1,5 @@
 <ion-view title="Users">
-    <ion-content>						
+    <ion-content has-header="true" has-footer="true" on-infinite-scroll="loadMore()">			
 			<div class="list list-inset">
 				<label class="item item-input">
 						<i class="icon ion-search placeholder-icon"></i>
@@ -11,35 +11,36 @@
 				<style>
 				#userpic {background-position:left; padding-left:10px;}
 				</style>
+			<div style="margin-left:auto; margin-right:auto; width:200px">
 			<div>
-				<div>
 				 <h1>Price to be used</h1>
-				 <div>
 					<div ng-repeat="prices in prices">
-						<div class="container">
-							Name of the price: {{prices.NAME}}<br>
+						<div style="margin-left:auto; margin-right:auto; width:200px;">
+							<h5>Name of the price: {{prices.NAME}}<br>
 							Picture: {{prices.IMG_SRC}}<br>
 							DESCRIPTION: {{prices.DESCRIPTION}}<br>
 							Price ID: {{prices.ID}}<br>
-							STORYLINE_ID: {{prices.STORYLINE_ID}}
+							STORYLINE_ID: {{prices.STORYLINE_ID}}</h5>
 							<hr>
 						</div>
 					 </div>
 				 </div>
 				</div>
-				
-				<div>
+				</div>
+					
+					<div style="margin-left:auto; margin-right:auto; width:180px">
+			<div>
 				 <h1>Completed stories</h1>
 				 <div>
 					<div ng-repeat="stories in completedStories">
 						<div class="container">
-							Name of the story: {{stories.NAME}}<br>
+						<h6>	Name of the story: {{stories.NAME}}<br>
 							DESCRIPTION: {{stories.DESCRIPTION}}<br>
 							Storyline name: {{stories.STORYLINE_NAME}}<br>
 							STORYLINE ID: {{stories.STORYLINE_ID}} <br>
 							<button ui-sref="storydetails({storylineID: stories.STORYLINE_ID})" class="button button-calm" id="storydetailsbutton">
 							Check story details 
-						</button>
+						</button></h6>
 							<hr>
 							
 						</div>
@@ -48,6 +49,7 @@
 				</div>
 					
 			</div>
+			<ion-infinite-scroll></ion-infinite-scroll>
 	</ion-content>
 </ion-view> 
 
