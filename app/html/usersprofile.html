@@ -36,8 +36,12 @@
 							Name of the story: {{stories.NAME}}<br>
 							DESCRIPTION: {{stories.DESCRIPTION}}<br>
 							Storyline name: {{stories.STORYLINE_NAME}}<br>
-							STORYLINE ID: {{stories.STORYLINE_ID}}
+							STORYLINE ID: {{stories.STORYLINE_ID}} <br>
+							<button ui-sref="storydetails({storylineID: stories.STORYLINE_ID})" class="button button-calm" id="storydetailsbutton">
+							Check story details 
+						</button>
 							<hr>
+							
 						</div>
 					 </div>
 				 </div>
