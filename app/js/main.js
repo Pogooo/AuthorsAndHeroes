@@ -97,7 +97,56 @@ angular.module('aah', ['ionic'])
 })
 
 .controller('UserProfileCtrl', function($scope) {
-  $scope.dunno = "I don't know";
+   $scope.prices= [
+  {
+	  NAME : "price",
+	  ID: 2,
+	  DESCRIPTION : "10",
+	  IMG_SRC: "prices/price.jpg",
+	  STORYLINE_ID: 389234
+  },
+  {
+	  NAME : "price",
+	  ID: 3,
+	  DESCRIPTION : "20",
+	  IMG_SRC: "prices/price.jpg",
+	  STORYLINE_ID: 388322
+  },
+    {
+	  NAME : "price",
+	  ID: 3,
+	  DESCRIPTION : "30",
+	  IMG_SRC: "prices/price.jpg",
+	  STORYLINE_ID: 227992
+  }
+  ];
+  
+  $scope.completedStories = [
+		{
+			NAME: 'valami',
+			DESCRIPTION: "dsfdsafdsagfdsa dsf dsa dst ",
+			STORYLINE_NAME: "Valami storyline",
+			STORYLINE_ID: 12412
+		},
+		{
+			NAME: 'valami',
+			DESCRIPTION: "dsfdsafdsagfdsa dsf dsa dst ",
+			STORYLINE_NAME: "Valami storyline",
+			STORYLINE_ID: 12412
+		},
+				{
+			NAME: 'valami',
+			DESCRIPTION: "dsfdsafdsagfdsa dsf dsa dst ",
+			STORYLINE_NAME: "Valami storyline",
+			STORYLINE_ID: 12412
+		},
+				{
+			NAME: 'valami',
+			DESCRIPTION: "dsfdsafdsagfdsa dsf dsa dst ",
+			STORYLINE_NAME: "Valami storyline",
+			STORYLINE_ID: 12412
+		}
+	];
 })
 
 .controller('SettingCtrl', function($scope) {
