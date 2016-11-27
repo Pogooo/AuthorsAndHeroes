@@ -97,6 +97,9 @@ angular.module('aah', ['ionic'])
 })
 
 .controller('UserProfileCtrl', function($scope) {
+	 $scope.reCalculateSize= function() {
+        $ionicScrollDelegate.$getByHandle('UserProfileCtrl').resize();
+    }
    $scope.prices= [
   {
 	  NAME : "price",
