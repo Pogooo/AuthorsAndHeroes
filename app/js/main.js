@@ -1,4 +1,4 @@
-angular.module('aah', ['ionic', 'ngAnimate'])
+angular.module('aah', ['ionic', 'ngAnimate', 'aah.viktor', 'aah.jordy', 'aah.maxime', 'aah.muhammad', 'aah.evgenii', 'aah.georgii'])
 
 .config(function($stateProvider, $urlRouterProvider) {
   //
@@ -82,14 +82,6 @@ angular.module('aah', ['ionic', 'ngAnimate'])
     { title: 'Get high enough to grab the flag' },
     { title: 'Find the Princess' }
   ];
-})
-
-.controller('AuthorStoriesCtrl', function($scope, $http) {
-	$scope.storyline = {stations: []};
-	
-  $scope.addStation = function(){
-		$scope.storyline.stations.push({});
-	};
 })
 
 .controller('StartCtrl', function($scope) {
