@@ -1,4 +1,9 @@
 /* Empty. Add your own CSS if you like */
+/* Viktor's code*/
+.content-with-bottombar{
+	padding-bottom: 50px;
+}
+
 .scroll{height: 100%;}
 
 .bar.bar-positive {

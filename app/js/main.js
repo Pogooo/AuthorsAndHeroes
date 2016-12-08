@@ -41,6 +41,17 @@ angular.module('aah', ['ionic', 'ngAnimate', 'aah.viktor', 'aah.jordy', 'aah.max
     }
   })
 	
+	//Storylines' page
+	.state('storyline', {
+    url: "/storyline/:id",
+		views: {
+      '': {
+        templateUrl: "app/html/storyline.html",
+        controller: 'StorylineCtrl'
+      }
+    }
+  })
+	
 	//user's profile page
 	.state('usersprofile', {
     url: "/usersprofile",

@@ -1,43 +1,76 @@
+
 <ion-view title="Author's stories">
-    <ion-content padding="true">			
-			<div>
+    <ion-content padding="true">	
+			<div class="content-with-bottombar">
 				<h1>Create Storyline</h1>
-				<label>name
-				<input type="text" ng-model="storyline.name"/>
-				</label><br>
-				<div id="bacon-div">
-					<div ng-repeat="station in storyline.stations" class="new-bacon-data">
-						<h2>Station</h2>
-						<label>name
-						<input type="text" ng-model="station.name"/><br>
+				<label class="item item-input">
+					<span class="input-label">Storyline name</span>
+					<input class="input" type="text" ng-model="storyline.name"/>
+				</label>
+				<div class="card">
+					<div class="item item-divider">
+						Storyline's price
+					</div>
+					<div class="item item-text-wrap">
+						<label class="item item-input">
+							<span class="input-label">Price name</span>
+							<input class="input" type="text" ng-model="storyline.price.name"/>
 						</label>
-						<label>description
-						<input type="text" ng-model="station.description"/><br>
-						</label>
-						<label>bacon pick from the map
-						<input type="text" ng-model="station.baconid"/><br>
-						</label>
-						<label>question</label>
-						<input type="text" ng-model="station.question"/><br>
-						</label>
-						<label>answer
-						<input type="text" ng-model="station.answer"/><br>
-						</label>
-						<label>add photo
-						<input type="text" ng-model="station.photo"/>
+						<label class="item item-input">
+							<span class="input-label">Price description</span>
+							<textarea ng-model="storyline.price.description"></textarea>
 						</label>
 					</div>
 				</div>
+				<div id="bacon-div">
+					<div ng-repeat="station in storyline.stations" class="new-bacon-data card">
+						<div class="item item-divider">
+							<h2>No. {{$index + 1}} Station</h2>
+						</div>
+						<div class="item item-text-wrap">
+							<button class="button" ng-click="addStationPhoto($index)">add station photo</button>
+							<button class="button button-outline button-assertive" ng-click="deleteStation($index)">Delete Station</button>
+							<label class="item item-input">
+								<span class="input-label">name</span>
+								<input class="input" type="text" ng-model="station.name"/>
+							</label>
+							<label class="item item-input">
+								<span class="input-label">description</span>
+								<textarea ng-model="station.description"></textarea>
+							</label>
+							<label class="item item-input">
+								<span class="input-label">bacon pick from the map</span>
+								<input type="text" ng-model="station.baconid"/>
+							</label>
+							<label class="item item-input">
+								<span class="input-label">question text</span>
+								<input type="text" ng-model="station.question.text"/>
+							</label>
+							<label class="item item-input item-select">
+								<span class="input-label">anwer type</span>
+								<select ng-init="station.question.type = 'text'" 
+									ng-model="station.question.type">
+									<option value="text" selected>Text</option>
+									<option value="photo">Photo</option>
+								</select>
+							</label>
+							<label ng-show="station.question.type == 'text'" class="item item-input">
+								<span class="input-label">answer</span>
+								<input type="text" ng-model="station.answer"/><br>
+							</label>
+						</div>
+					</div>
+				</div>
 				<button class="button" ng-click="addStation()">Add new station</button>
-				<button class="button" ng-click="makeNewStory()">Create new story</button>
-			</div>
-			<div>
-				<h1>Written stories</h1>
-				<ul ng-repeat="writtenStoryline in storiesHistory">
-					<li>
-						{{writtenStoryline.NAME}}
-					</li>
-				</ul>
+				<button class="button button-balanced" ng-click="makeNewStory()">Create new story</button>
+				<div>
+					<h1>Written stories</h1>
+					<ul ng-repeat="writtenStoryline in storiesHistory">
+						<li>
+							{{writtenStoryline.NAME}}
+						</li>
+					</ul>
+				</div>
 			</div>
 		</ion-content>
 </ion-view> 
