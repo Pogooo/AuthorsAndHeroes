@@ -1,5 +1,5 @@
 <ion-view title="Users">
-    <ion-content class="col-md-9" has-header="true" has-footer="true" on-infinite-scroll="loadMore()">			
+    <ion-content has-header="true" has-footer="true" on-infinite-scroll="loadMore()">			
 			<div class="list list-inset">
 				<label class="item item-input">
 						<i class="icon ion-search placeholder-icon"></i>
@@ -11,44 +11,45 @@
 				<style>
 				#userpic {background-position:left; padding-left:10px;}
 				</style>
-			<div style="margin-left:auto;  text-align:center; margin-right:auto; width:80%">
-			<div >
-				 <h1>Price to be used</h1>
+				<div class="list">
+				<h1>Prices to be used</h1>
 					<div ng-repeat="prices in prices">
-						<div style="margin-left:auto; text-align:center; margin-right:auto; width:80%;">
-							<h2>Name of the price: {{prices.NAME}}<br>
-							Picture: {{prices.IMG_SRC}}<br>
+						<a class="item item-thumbnail-left">
+						<!-- <img src="cover.jpg"> -->
+						<h2>Name of the price: {{prices.NAME}}<br>
 							DESCRIPTION: {{prices.DESCRIPTION}}<br>
 							Price ID: {{prices.ID}}<br>
 							STORYLINE_ID: {{prices.STORYLINE_ID}}</h2>
-							<hr>
-						</div>
-					 </div>
-				 </div>
+						</a>
+					</div>
+ 
+
 				</div>
-				</div>
-					
-					<div style="margin-left:auto;  text-align:center; margin-right:auto; width:70%">
-			<div>
-				 <h1>Completed stories</h1>
-				 <div>
-					<div ng-repeat="stories in completedStories">
-						<div class="container" >
-						<h2>	Name of the story: {{stories.NAME}}<br>
-							DESCRIPTION: {{stories.DESCRIPTION}}<br>
-							Storyline name: {{stories.STORYLINE_NAME}}<br>
-							STORYLINE ID: {{stories.STORYLINE_ID}} <br>
-							<button ui-sref="storydetails({storylineID: stories.STORYLINE_ID})" class="button button-calm" id="storydetailsbutton">
-							Check story details 
-						</button></h2>
-							<hr>
+
+				<div class="list">
+					<div>
+						<h1>Completed stories</h1>
+						<div>
+							<div ng-repeat="stories in completedStories">
+							<a class="item item-thumbnail-left"  ui-sref="storydetails({storylineID: stories.STORYLINE_ID})">
 							
+								<h2>	Name of the story: {{stories.NAME}}<br>
+								DESCRIPTION: {{stories.DESCRIPTION}}<br>
+								Storyline name: {{stories.STORYLINE_NAME}}<br>
+								STORYLINE ID: {{stories.STORYLINE_ID}} <br>
+								</h2>
+							</a>
+							
+							
+							</div>
 						</div>
-					 </div>
-				 </div>
+					</div>
+ 
 				</div>
+
+
 					
-			</div>
+				
 			<ion-infinite-scroll></ion-infinite-scroll>
 	</ion-content>
 </ion-view> 
