@@ -14,11 +14,21 @@
 	color: black !important;
 }
 
+.list.list-inset
+{	width: 80%;
+	margin-left:10%;
+	margin-right:10%;
+
+}
 .button-bar
 {
-	min-height:100%;
+	
+   
+    min-height: 72%;
 	text-align: center;
-	padding-top: 10%; 
+	padding-top: 5%; 
+	padding-left:10%;
+	padding-right:10%;
 	
 }
 

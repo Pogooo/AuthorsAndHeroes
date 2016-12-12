@@ -3,7 +3,7 @@
 			<div class="list list-inset">
 				<label class="item item-input">
 						<i class="icon ion-search placeholder-icon"></i>
-				<input type="text" placeholder="Search">
+				<input type="text" class="usersearch" placeholder="Search" >
 				</label>
 			</div>
 			<div id="username" style="text-align:center;">Username:  {{user.name}}</div>
@@ -11,16 +11,16 @@
 				<style>
 				#userpic {background-position:left; padding-left:10px;}
 				</style>
-			<div style="margin-left:auto; margin-right:auto; width:200px">
-			<div>
+			<div style="margin-left:auto;  text-align:center; margin-right:auto; width:80%">
+			<div >
 				 <h1>Price to be used</h1>
 					<div ng-repeat="prices in prices">
-						<div style="margin-left:auto; margin-right:auto; width:200px;">
-							<h5>Name of the price: {{prices.NAME}}<br>
+						<div style="margin-left:auto; text-align:center; margin-right:auto; width:80%;">
+							<h2>Name of the price: {{prices.NAME}}<br>
 							Picture: {{prices.IMG_SRC}}<br>
 							DESCRIPTION: {{prices.DESCRIPTION}}<br>
 							Price ID: {{prices.ID}}<br>
-							STORYLINE_ID: {{prices.STORYLINE_ID}}</h5>
+							STORYLINE_ID: {{prices.STORYLINE_ID}}</h2>
 							<hr>
 						</div>
 					 </div>
@@ -28,19 +28,19 @@
 				</div>
 				</div>
 					
-					<div style="margin-left:auto; margin-right:auto; width:180px">
+					<div style="margin-left:auto;  text-align:center; margin-right:auto; width:70%">
 			<div>
 				 <h1>Completed stories</h1>
 				 <div>
 					<div ng-repeat="stories in completedStories">
-						<div class="container">
-						<h6>	Name of the story: {{stories.NAME}}<br>
+						<div class="container" >
+						<h2>	Name of the story: {{stories.NAME}}<br>
 							DESCRIPTION: {{stories.DESCRIPTION}}<br>
 							Storyline name: {{stories.STORYLINE_NAME}}<br>
 							STORYLINE ID: {{stories.STORYLINE_ID}} <br>
 							<button ui-sref="storydetails({storylineID: stories.STORYLINE_ID})" class="button button-calm" id="storydetailsbutton">
 							Check story details 
-						</button></h6>
+						</button></h2>
 							<hr>
 							
 						</div>
